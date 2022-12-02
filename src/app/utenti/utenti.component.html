@@ -1,0 +1,13 @@
+<div class="container mt-4">
+  <h2 class="text-center">Utenti</h2>
+  <hr>
+  <div class="list-group">
+      <ul class="unstyled">
+          <li [routerLink]="['userInfo/', user.id]" routerLinkActive="active" class="list-group-item" *ngFor="let user of users">
+              {{user.name}}
+          </li>
+      </ul>
+      <router-outlet></router-outlet>
+  </div>
+</div>
+

@@ -1,0 +1,36 @@
+<h1 class="text-center p-5"><span appHighlight>Ciao</span> Crea Post</h1>
+<form #postForm="ngForm" (ngSubmit)="getData(postForm.value)">
+  <div class="justify-content-center p-5">
+    <div class="col-12">
+      <label for="inputTitle" class="form-label">Title</label>
+      <input type="text" ngModel name="title" class="form-control" placeholder="Post's title...">
+    </div>
+    <div class="col-12">
+      <label for="inputBody" class="form-label">Body</label>
+      <textarea ngModel name="body" class="form-control" rows="3" placeholder="Post's body..."></textarea>
+    </div>
+
+    <div class="form-check form-switch">
+      <input class="form-check-input" ngModel name="active" type="checkbox" checked>
+      <label class="form-check-label" for="flexSwitchCheckChecked">Attiva</label>
+    </div>
+
+    <div class="col-md-3">
+      <label for="inputState" class="form-label">Tipo</label>
+      <select ngModel name="type" class="form-select">
+        <option selected="education">education</option>
+        <option value="news">news</option>
+        <option value="politic">politic</option>
+      </select>
+    </div>
+
+    <div class="col-12">
+      <label for="inputTitle" class="form-label">Nome Autore</label>
+      <input type="text" ngModel name="authors" class="form-control" placeholder="Post's title...">
+    </div>
+
+    <div class="col-12 d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">Crea</button>
+    </div>
+  </div>
+</form>
